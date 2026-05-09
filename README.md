@@ -1,48 +1,46 @@
 # Ai_Vision_Detection
 
-Lightweight AI vision detection project using YOLOv8 for object detection on camera input.
+AI vision detection using YOLOv8 for real-time object detection.
 
 ## Overview
 
-- Uses YOLOv8 models (`yolov8n.pt`, `yolov8s.pt`) for real-time detection.
-- Modular code under `modules/` for camera, detector, display, and voice.
-- `utils/` contains logging utilities.
+- Real-time object detection using YOLOv8 (`yolov8n.pt`, `yolov8s.pt`).
+- Modular implementation under `modules/` for camera, detection, display, and voice.
+- Utility functions and logging are provided in `utils/`.
 
-## Files
+## Repository structure
 
-- `main.py` — application entrypoint.
-- `config.py` — configuration values.
-- `requirements.txt` — Python dependencies.
-- `yolov8n.pt`, `yolov8s.pt` — pretrained model files (included).
-- `modules/`:
-  - `camera.py` — camera capture and frame handling.
-  - `detector.py` — model loading and inference logic.
-  - `display.py` — rendering detections to screen.
-  - `voice.py` — optional voice alerts.
+- `main.py` — application entry point
+- `config.py` — configuration settings
+- `requirements.txt` — Python dependencies
+- `yolov8n.pt`, `yolov8s.pt` — pretrained model weights
+- `modules/` — `camera.py`, `detector.py`, `display.py`, `voice.py`
+- `utils/` — helper utilities and logging
 
 ## Quickstart
 
-1. Create a Python virtual environment and install dependencies:
+1. Create and activate a virtual environment, then install dependencies:
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate    # or .venv\\Scripts\\activate on Windows
+.venv\Scripts\activate    # Windows
+source .venv/bin/activate  # macOS / Linux
 pip install -r requirements.txt
 ```
 
-2. Run the app:
+2. Run the application:
 
 ```bash
 python main.py
 ```
 
-3. If you have multiple models, configure `config.py` to choose `yolov8n.pt` or `yolov8s.pt`.
+3. To select a model, edit `config.py` and set the desired weight file.
 
 ## Notes
 
-- Adjust camera index/settings in `modules/camera.py` if needed.
-- This repository contains model weight files; ensure you have sufficient disk space.
+- Adjust camera index or parameters in `modules/camera.py` as needed.
+- Model weight files are large; ensure adequate disk space.
 
 ## License
 
-Add your preferred license to the repository if desired.
+This project is licensed under the MIT License. See the `LICENSE` file for full terms.
